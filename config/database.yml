@@ -22,4 +22,9 @@ test:
 
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  Username: 'lifebalux'
+  Password: <%= ENV['LIFEBALUX_DB_PASSWORD'] %>
+
   database: db/production.sqlite3
